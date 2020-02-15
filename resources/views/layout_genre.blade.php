@@ -76,10 +76,7 @@
 
         {{--<div class="alert alert-info alert-dismissable alert-common" style="position:relative">--}}
         {{--<button type="button" class="close" style="position:absolute; right:8px; top:3px;" data-dismiss="alert" onclick="javascript:$.cookie(&quot;cnadd10&quot;, &quot;off&quot;,{expires: 365,path: &quot;/&quot;})">×</button>--}}
-        {{--<div class="row">--}}
-        {{--<div class="col-xs-12 col-md-6 col-lg-3 text-center"><strong>永久域名：</strong><a href="https://www.javbus.com/" target="_blank">https://www.javbus.com</a></div>--}}
-        {{--<div class="col-xs-12 col-md-6 col-lg-3 text-center"><strong>防屏蔽地址：</strong><a href="https://www.busjav.us/" rel="nofollow">https://www.busjav.us</a></div><div class="col-xs-12 col-md-6 col-lg-3 text-center"><strong>防屏蔽地址：</strong><a href="https://www.dmmbus.us/" rel="nofollow">https://www.dmmbus.us</a></div><div class="col-xs-12 col-md-6 col-lg-3 text-center"><strong>防屏蔽地址：</strong><a href="https://127.0.0.1/" rel="nofollow">https://127.0.0.1</a></div>--}}
-        {{--</div>--}}
+        
         {{--</div>--}}
 
 

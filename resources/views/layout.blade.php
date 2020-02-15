@@ -146,106 +146,6 @@
 
 @yield('content')
 
-
-<footer class="footer hidden-xs" style="display: none;">
-    <div class="container-fluid">
-        <p><a href="/doc/terms">Terms</a> / <a
-                    href="/doc/privacy">Privacy</a> / <a href="/doc/usc">2257</a>
-
-             /  <script type="text/javascript" src="https://s96.cnzz.com/z_stat.php?id=1277368229&web_id=1277368229"></script>
-
-            / <a href="http://www.rtalabel.org/" target="_blank" rel="external nofollow">RTA</a> / <a
-                    href="javascript:bootstr(1);" r="">廣告投放</a> / <a href="javascript:bootstr(2);">聯絡我們</a> / <a
-                    href="/website.php" target="_blank">防屏蔽地址發布頁</a><br><a
-                    href="/CHN-120#formModal" id="adscontact" data-toggle="modal"></a>
-            Copyright © 2013 JavBus. All Rights Reserved. All other trademarks and copyrights are the property of their
-            respective holders. The reviews and comments expressed at or through this website are the opinions of the
-            individual author and do not reflect the opinions or views of JavBus. JavBus is not responsible for the
-            accuracy of any of the information supplied here.</p>
-    </div>
-</footer>
-<div class="visible-xs-block footer-bar-placeholder"></div>
-
-<script language="javascript">
-    function bootstr(type) {
-        ads = "廣告投放";
-        contact = "聯絡我們";
-        translate = "翻譯";
-        $("#adstype").val(type);
-        if (type == 1) {
-            $("#contactModalLab").html(ads);
-            $("#qqskype").show();
-            $("#transinfo").hide();
-            $("#translanguage").hide();
-            $("#mailcontent").show();
-        } else if (type == 2) {
-            $("#contactModalLab").html(contact);
-            $("#qqskype").show();
-            $("#transinfo").hide();
-            $("#translanguage").hide();
-            $("#mailcontent").show();
-        } else if (type == 3) {
-            $("#contactModalLab").html(translate);
-            $("#qqskype").hide();
-            $("#transinfo").show();
-            $("#translanguage").show();
-            $("#mailcontent").hide();
-        }
-        $("#adscontact").trigger("click");
-        getverifycode();
-    };
-
-    function getverifycode() {
-        $('#verify').attr("src", "/post/verify?" + Math.random() * 10000);
-    };
-
-    function IsMail(mail) {
-        var remail = /^([a-zA-Z0-9_-])+(\.)?([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
-        return (remail.test(mail));
-    };
-
-    function checkform() {
-        var post = true;
-        if ($("#verifycode").val().length != 5) {
-            alert("驗證碼輸入錯誤!")
-            $("#verifycode").focus();
-            post = false;
-        }
-        if ($("#contact").val().length > 255) {
-            alert("聯繫方式字數過多!")
-            $("#contact").focus();
-            post = false;
-        }
-
-        if (!IsMail($("#mail").val())) {
-            alert("請輸入正確的電郵地址!")
-            $("#mail").focus();
-            post = false;
-        }
-
-        if ($("#intention").val().length > 25500) {
-            alert("投放意向字數過多!")
-            $("#intention").focus();
-            post = false;
-        }
-
-        if ($("#trans").val().length > 255) {
-            alert("Too many words in your language textbox!")
-            $("#intention").focus();
-            post = false;
-        }
-        if (post == true) {
-            $("#modalclose").trigger("click");
-            $("#postform").attr("action", "/post/contact");
-            $("#postform").submit();
-        }
-        return post;
-    };
-
-
-</script>
-
-
 <!-- Modal Forms -->
 <div id="formModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -330,23 +230,7 @@
     </div>
 </div>
 <script src="{{ asset('avbook/nav.overlay.js') }}"></script>
-<!-- Statistics START (aync) -->
 
-<!-- Statistics END 
-
-
-<script type="text/javascript">var _Hasync= _Hasync|| [];
-_Hasync.push(['Histats.start', '1,3517660,4,0,0,0,00010000']);
-_Hasync.push(['Histats.fasi', '1']);
-_Hasync.push(['Histats.track_hits', '']);
-(function() {
-var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
-hs.src = ('//s10.histats.com/js15_as.js');
-(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
-})();</script>
-
-
--->
 @yield('endscript')
 
 <script async="" src="{{ asset('avbook/mask.js') }}"></script>
